@@ -13,7 +13,7 @@ public class MainApplication extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
-        wxAPI = WXAPIFactory.createWXAPI(this,"",true);
-        wxAPI.registerApp("");
+        wxAPI = WXAPIFactory.createWXAPI(this,"wx77b4e5ed16f3ebc0",true);
+        wxAPI.registerApp("wx77b4e5ed16f3ebc0");
     }
 }
