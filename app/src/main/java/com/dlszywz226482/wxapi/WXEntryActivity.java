@@ -1,4 +1,4 @@
-package com.m_diary.wechatlogindemo.wxapi;
+package com.dlszywz226482.wxapi;
 
 import android.app.Activity;
 

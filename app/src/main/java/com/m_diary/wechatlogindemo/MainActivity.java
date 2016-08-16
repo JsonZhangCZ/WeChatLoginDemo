@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.tencent.mm.sdk.modelmsg.SendAuth;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         wxLogin.setOnClickListener(this);
 
+
     }
 
     @Override
@@ -26,7 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 SendAuth.Req req = new SendAuth.Req();
                 req.scope = "snsapi_userinfo";
                 req.state = "wechat_sdk_demo_test";
-//                api.sendReq(req);
+                ((MainApplication)getApplication()).getWxAPI().sendReq(req);
+                Toast.makeText(MainActivity.this, "请求微信登录", Toast.LENGTH_SHORT).show();
             break;
         }
     }

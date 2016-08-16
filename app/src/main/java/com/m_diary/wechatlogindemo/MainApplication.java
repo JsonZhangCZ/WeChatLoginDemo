@@ -16,4 +16,8 @@ public class MainApplication extends Application{
         wxAPI = WXAPIFactory.createWXAPI(this,"wx77b4e5ed16f3ebc0",true);
         wxAPI.registerApp("wx77b4e5ed16f3ebc0");
     }
+
+    public IWXAPI getWxAPI(){
+        return wxAPI;
+    }
 }
